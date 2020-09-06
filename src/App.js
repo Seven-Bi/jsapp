@@ -17,18 +17,39 @@ let ReadMe = () => {
 }
 
 class GridView extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+        	rgb_color: [],
+        	loaded: false
+        }
+    }
 
 	render() {
-		return(
-			<div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
-				<div>
-					<Grids row_num={30} col_num={20} />
+		if(this.state.loaded) {
+			return(
+				<div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+					<div>
+						<Grids row_num={128} col_num={256} />
+					</div>
+					<div>
+						<ReadMe />
+					</div>
 				</div>
-				<div>
-					<ReadMe />
+			)
+		}
+		else {
+			return(
+				<div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+					<div>
+						<Grids row_num={20} col_num={30} />
+					</div>
+					<div>
+						<ReadMe />
+					</div>
 				</div>
-			</div>
-		)
+			)
+		}
 	}
 }
 

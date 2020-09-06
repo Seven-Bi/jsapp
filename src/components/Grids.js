@@ -4,7 +4,6 @@ import Row from './Row';
 
 
 
-
 export default function Grids(props) {
 	const grids = [...Array(props.row_num).keys()].map((index) => {
 		return(
