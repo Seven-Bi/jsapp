@@ -5,12 +5,12 @@ import Row from './Row';
 
 
 export default function Grids(props) {
-	if(props.status === -1) {
+	if(props.status === 'loading') {
 		return(
 			<div>
 				<Row row_index={10} col_num={150} />
 				<div style={{paddingLeft: '17%'}}>
-					<h3><p style={{ fontFamily: 'monospace' }}>Loading ...</p></h3>
+					<h3><p style={{ fontFamily: 'monospace' }}>It's {props.status} ...</p></h3>
 				</div>
 				<Row row_index={10} col_num={150} />
 			</div>

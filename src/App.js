@@ -30,7 +30,7 @@ class GridView extends React.Component {
 			return(
 				<div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
 					<div>
-						<Grids row_num={128} col_num={256} status={0}/>
+						<Grids row_num={128} col_num={256} />
 					</div>
 					<div>
 						<ReadMe />
@@ -42,7 +42,7 @@ class GridView extends React.Component {
 			return(
 				<div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
 					<div>
-						<Grids row_num={5} col_num={100} status={-1}/>
+						<Grids row_num={5} col_num={100} status='loading' />
 					</div>
 				</div>
 			)
