@@ -6,7 +6,7 @@ import RGB_Generator from './RGB_Generator';
 
 describe('solution(RGB_Generator) algorithm test', () => {
 
-	test('Test Accuracy - assume [1,2,3] numbers can pick 3 from them, see the possibilities, expect data table as below', () => {
+	test('Test Accuracy - assume [1,2,3] numbers can pick 3 from them, see the possibilities.', () => {
 		let fake_data = 
 		[
 		  [ 1, 1, 1 ], [ 1, 1, 2 ], [ 1, 1, 3 ],
@@ -19,7 +19,6 @@ describe('solution(RGB_Generator) algorithm test', () => {
 		  [ 3, 2, 1 ], [ 3, 2, 2 ], [ 3, 2, 3 ],
 		  [ 3, 3, 1 ], [ 3, 3, 2 ], [ 3, 3, 3 ]
 		]
-		console.log(fake_data);
 		expect(RGB_Generator(3)).toEqual(fake_data);
 	});
 

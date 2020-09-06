@@ -42,7 +42,7 @@ class GridView extends React.Component {
 			return(
 				<div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
 					<div>
-						<Grids row_num={5} col_num={100} status='loading' />
+						<Grids row_num={5} col_num={100} status="loading" />
 					</div>
 				</div>
 			)
