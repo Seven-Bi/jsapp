@@ -7,7 +7,7 @@ import SingleGrid from './Grid';
 export default function Row(props) {
 	const a_row = [...Array(props.col_num).keys()].map((index) => {
 		return(
-			<SingleGrid key={index} col_index={index} row_index={props.row_index}/>
+			<SingleGrid key={index} col_index={index+1} row_index={props.row_index}/>
 		);
 	});
 
