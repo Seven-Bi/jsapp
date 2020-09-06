@@ -8,7 +8,7 @@ desribe('solution(RGB_Generator) algorithm test', () => {
 
 	test('test accuracy', () => {
 		console.log('create the fake data compares with output');
-		fake_data = 
+		let fake_data = 
 		[
 		  [ 1, 1, 1 ], [ 1, 1, 2 ], [ 1, 1, 3 ],
 		  [ 1, 2, 1 ], [ 1, 2, 2 ], [ 1, 2, 3 ],
@@ -21,7 +21,7 @@ desribe('solution(RGB_Generator) algorithm test', () => {
 		  [ 3, 3, 1 ], [ 3, 3, 2 ], [ 3, 3, 3 ]
 		]
 		console.log(fake_data);
-		expect(RGB_Generator(n=3)).toEqual(fake_data);
+		expect(RGB_Generator(3)).toEqual(fake_data);
 	});
 
 	// test();
