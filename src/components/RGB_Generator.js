@@ -1,7 +1,18 @@
 
 
 
-function RGB_Generator(n=32, res=[]) {
+function RGB_Generator(n, res) {
+	if (typeof n !== 'number' | typeof n === 'undefined') {
+		throw new Error('number required')
+	}
+
+	if (n < 3) {
+		throw new Error('must equal or greater than 3')
+	}
+
+	if (res.constructor !== Array | res.length > 0) {
+		throw new Error('empty array type required')
+	}	
 
 	const k = 3; // RGB color
 	// start from 1 1 1
