@@ -5,7 +5,7 @@ import Grids from "./components/Grids";
 
 
 
-const text = 'This is a demo for displaying an iamge :)'
+const text = 'This is a demo for displaying an image :)'
 
 let ReadMe = () => {
 	return(

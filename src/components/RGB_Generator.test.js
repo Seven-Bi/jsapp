@@ -1,13 +1,12 @@
+import React from 'react';
+import { render } from '@testing-library/react';
 import RGB_Generator from './RGB_Generator';
 
 
 
-desribe('solution(RGB_Generator) algorithm test', () => {
+describe('solution(RGB_Generator) algorithm test', () => {
 
-	beforeAll(() => console.log('This test is going to test accuracy, Integrity and time cost'));
-
-	test('test accuracy', () => {
-		console.log('create the fake data compares with output');
+	test('Test Accuracy - assume [1,2,3] numbers can pick 3 from them, see the possibilities, expect data table as below', () => {
 		let fake_data = 
 		[
 		  [ 1, 1, 1 ], [ 1, 1, 2 ], [ 1, 1, 3 ],
@@ -24,7 +23,9 @@ desribe('solution(RGB_Generator) algorithm test', () => {
 		expect(RGB_Generator(3)).toEqual(fake_data);
 	});
 
-	// test();
+	test('Test Integrity - compare possibilities with 32 -> in funciton, expect result with 32,768', () => {
+		expect(RGB_Generator(32).length).toEqual(32768);
+	});
 
 	// test();
 
