@@ -5,12 +5,12 @@ import Grids from "./components/Grids";
 
 
 
-const text = 'Hello, this is a demo to display an iamge :)'
+const text = 'This is a demo for displaying an iamge :)'
 
 let ReadMe = () => {
 	return(
 		<div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
-			<div style={{ textAlign: 'center' }}><h3>READ ME</h3></div>
+			<div style={{ fontFamily: 'monospace', textAlign: 'center' }}><h2>Greeting</h2></div>
 			<Typography>{text}</Typography>
 		</div>	
 	)
@@ -21,7 +21,7 @@ class GridView extends React.Component {
         super(props)
         this.state = {
         	rgb_color: [],
-        	loaded: false
+        	loaded: true
         }
     }
 
@@ -30,7 +30,7 @@ class GridView extends React.Component {
 			return(
 				<div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
 					<div>
-						<Grids row_num={128} col_num={256} />
+						<Grids row_num={128} col_num={256} status={0}/>
 					</div>
 					<div>
 						<ReadMe />
@@ -42,10 +42,7 @@ class GridView extends React.Component {
 			return(
 				<div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
 					<div>
-						<Grids row_num={20} col_num={30} />
-					</div>
-					<div>
-						<ReadMe />
+						<Grids row_num={5} col_num={100} status={-1}/>
 					</div>
 				</div>
 			)
