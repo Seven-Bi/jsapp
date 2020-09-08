@@ -2,7 +2,6 @@ import React from 'react';
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 import Grids from './Grids';
-import Paper from '@material-ui/core/Paper';
 
 
 

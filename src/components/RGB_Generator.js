@@ -23,6 +23,8 @@ function RGB_Generator(n, res) {
 		throw new Error('empty array type required')
 	}	
 
+
+	const data_range = pick_color_range();
 	const k = 3; // RGB color
 	// start from 1 1 1
 	let nums = [1, 1, 1];
@@ -31,7 +33,8 @@ function RGB_Generator(n, res) {
 
 	while (1) {
 		//add valid rgb color (cut off extra)
-		if (!nums.includes(n+1)) { res.push([...nums]) };
+		// if (!nums.includes(n+1)) { res.push([...nums]) };
+		if (!nums.includes(n+1)) { res.push([data_range[nums[0]], data_range[nums[1]], data_range[nums[2]]]) };
 
 		//[1, 1, 1] from left to right keep adding unitl to [n+1, n+1. n]
 		if (nums[k-3] > n) {
@@ -48,7 +51,7 @@ function RGB_Generator(n, res) {
 		}
 
 		// ones digit up to n
-		while (nums[k-1] == n) {
+		while (nums[k-1] === n) {
 			nums[k-1] = 1;
 			nums[k-2] += 1;
 			noUpdate = true;
