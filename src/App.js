@@ -1,7 +1,7 @@
 import React from "react";
 import Typography from '@material-ui/core/Typography';
 import Grids from "./components/Grids";
-import RGB_Generator from "./components/RGB_Generator";
+import { RGB_Range, RGB_Generator } from './RGB_Generator';
 import { DataContext } from "./DataContext";
 
 
@@ -44,7 +44,7 @@ class GridView extends React.Component {
 
 	componentDidMount() {
 		const n = 32;   // pick 32 color values from 1- 255
-		let data = RGB_Generator(n, [])
+		let data = RGB_Generator(n, [], RGB_Range)
 		this.setState({
 			rgb_color: data,
 			loaded: true

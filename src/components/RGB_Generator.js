@@ -1,4 +1,4 @@
-function pick_color_range() {
+function RGB_Range() {
 	let res = []
 	for (var i = 1; i <= 256; i++) {
 		if(i % 8 === 0) {
@@ -10,7 +10,7 @@ function pick_color_range() {
 
 
 
-function RGB_Generator(n, res) {
+function RGB_Generator(n, res, func) {
 	if (typeof n !== 'number' | typeof n === 'undefined') {
 		throw new Error('number required')
 	}
@@ -24,7 +24,7 @@ function RGB_Generator(n, res) {
 	}	
 
 
-	const data_range = pick_color_range();
+	const data_range = func();
 	const k = 3; // RGB color
 	// start from 1 1 1
 	let nums = [1, 1, 1];
@@ -69,4 +69,7 @@ function RGB_Generator(n, res) {
 	return res;
 }
 
-export default RGB_Generator;
+export {
+	RGB_Range,
+	RGB_Generator,
+}

@@ -5,7 +5,7 @@ import Grids from './Grids';
 
 
 
-describe('solution(RGB_Generator) algorithm test', () => {
+describe('React Component test', () => {
     let container = null;
 
     beforeEach(() => {
