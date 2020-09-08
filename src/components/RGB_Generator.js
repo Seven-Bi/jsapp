@@ -1,7 +1,6 @@
 function pick_color_range() {
-	let arr = [...Array(256).keys()].map((i) => i + 1);
 	let res = []
-	for (var i = 1; i <= arr.length; i++) {
+	for (var i = 1; i <= 256; i++) {
 		if(i % 8 === 0) {
 			res.push(i)
 		}
