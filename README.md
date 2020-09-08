@@ -1,6 +1,12 @@
 SEQTA Code Challenge
 ---
 
+
+Quick view to current work
+---
+![Upstream vs Origin](https://raw.githubusercontent.com/Seven-Bi/jsapp/features/screenshot/img.PNG)
+
+
 Some information about this project, just in case and also can be a chance to telling my thought and design of this code challenge.
 ---
 
