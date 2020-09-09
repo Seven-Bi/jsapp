@@ -5,7 +5,7 @@ import Grids from './Grids';
 
 
 
-describe('React Component test', () => {
+describe('React components test', () => {
     let container = null;
 
     beforeEach(() => {
@@ -21,7 +21,7 @@ describe('React Component test', () => {
         container = null;
     });
 
-    test("renders with or without a different props", () => {
+    test(">> renders with or without a different props", () => {
         // load component with prop value
         act(() => {
             render(<Grids status="loading"/>, container);
@@ -43,7 +43,7 @@ describe('React Component test', () => {
         expect(a_image.getAttribute('name')).toBe('pixel_image');
     });
 
-    test("test if can render exact numbers of pixel, and correct colors for each of them", () => {
+    test(">> test if can render exact numbers of pixel, and correct colors for each of them", () => {
         // col numbers
         act(() => {
             render(<Grids row_num={10} col_num={3} />, container);
