@@ -1,6 +1,12 @@
 SEQTA Code Challenge
 ---
 
+
+Quick view to current work
+---
+![Upstream vs Origin](https://raw.githubusercontent.com/Seven-Bi/jsapp/features/screenshot/img.PNG)
+
+
 Some information about this project, just in case and also can be a chance to telling my thought and design of this code challenge.
 ---
 
@@ -19,8 +25,7 @@ some of them just for easy check:
   
 The rest of steps which is the part not completed yet is calling the function and manipulate data to react components, to do so I feel it is better to put them on share resource so that every nodes under him still can access the data array, each node only needs few key information keeping itself simple until the last node a single Grid render then call a callback funciton pass its key information then this Grid should be able to set its background color, the last step of course create test cases, to do so it's better to mock data and simulating this whole process to render a Grid.
   
-As for test, there are some test cases are setup not 100% covered function and branches but did test react components Grids and its sub components, they are exactly
-match the pixel required, as well as algorithm tested correct data output, invalid parameters and error throw.
+As for test, since I have changed my code a bit, the previous test cases need to mend and new test cases are coming soon
 
 
-Thanks:)
+Thanks again :)
