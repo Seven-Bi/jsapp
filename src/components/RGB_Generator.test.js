@@ -2,6 +2,7 @@ import { RGB_Range, RGB_Generator } from './RGB_Generator';
 
 
 
+
 describe('Test algorithm', () => {
 	
 	test('Test rgb value length', () => {
@@ -56,7 +57,7 @@ describe('Test algorithm', () => {
 		expect(RGB_Generator(12, [], RGB_Range).length).toEqual(1728);
 	});
 
-	test('Parameter Test - try different cases parameters', () => {
+	test('>> Parameter Test - try different cases parameters', () => {
 		try {
 			RGB_Generator(2, [])
 		} catch (e) {
