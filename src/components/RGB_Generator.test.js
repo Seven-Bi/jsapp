@@ -4,9 +4,9 @@ import RGB_Generator from './RGB_Generator';
 
 
 
-describe('solution(RGB_Generator) algorithm test', () => {
+describe('Solution(RGB_Generator) algorithm test', () => {
 
-	test('Test Accuracy 1 - assume [1,2,3] numbers can pick 3 from them, see the possibilities.', () => {
+	test('>> Test Accuracy 1 - assume [1,2,3] numbers can pick 3 from them, see the possibilities.', () => {
 		let fake_data_a = 
 		[
 		  [ 1, 1, 1 ], [ 1, 1, 2 ], [ 1, 1, 3 ],
@@ -22,7 +22,7 @@ describe('solution(RGB_Generator) algorithm test', () => {
 		expect(RGB_Generator(3, [])).toEqual(fake_data_a);
 	});
 
-	test('Test Accuracy 2 - assume [1,2,3,4] numbers can pick 3 from them, see the possibilities.', () => {
+	test('>> Test Accuracy 2 - assume [1,2,3,4] numbers can pick 3 from them, see the possibilities.', () => {
 		let fake_data_b = 
 		[
 			[ 1, 1, 1 ], [ 1, 1, 2 ], [ 1, 1, 3 ], [ 1, 1, 4 ],
@@ -45,15 +45,15 @@ describe('solution(RGB_Generator) algorithm test', () => {
 		expect(RGB_Generator(4, [])).toEqual(fake_data_b);
 	});
 
-	test('Test Integrity 1 - compare possibilities with 32 -> in funciton, expect result with 32,768', () => {
+	test('>> Test Integrity 1 - compare possibilities with 32 -> in funciton, expect result with 32,768', () => {
 		expect(RGB_Generator(32, []).length).toEqual(32768);
 	});
 
-	test('Test Integrity 2 - compare possibilities with 12 -> in funciton, expect result with 1,728', () => {
+	test('>> Test Integrity 2 - compare possibilities with 12 -> in funciton, expect result with 1,728', () => {
 		expect(RGB_Generator(12, []).length).toEqual(1728);
 	});
 
-	test('Parameter Test - try different cases parameters', () => {
+	test('>> Parameter Test - try different cases parameters', () => {
 		try {
 			RGB_Generator(2, [])
 		} catch (e) {
