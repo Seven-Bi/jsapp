@@ -47,54 +47,88 @@ describe('React components test', () => {
             );
         });
 
-
-        // const image = container.querySelector('div');
-        // expect(image.getAttribute('name')).toBe('pixel_image');
+        const image = container.querySelector('div');
+        expect(image.getAttribute('name')).toBe('pixel_image');
     
         //with wrong value
-        // act(() => {
-        //     render(<Grids status="hi" />, container);
-        // });
-        // const a_image = container.querySelector('div');
-        // expect(a_image.getAttribute('name')).toBe('pixel_image');
+        act(() => {
+            const func = jest.fn()
+            render
+            (
+              <DataContext.Provider value=
+                {{ 
+                    data: [8, 16, 24],
+                    callback: func,
+                    max_row: 128,
+                    max_col: 256 
+                }}
+              >
+                <Grids status="hi" />
+              </DataContext.Provider>, container
+            );
+        });
+        const a_image = container.querySelector('div');
+        expect(a_image.getAttribute('name')).toBe('pixel_image');
     });
 
-//     test(">> test if can render exact numbers of pixel, and correct colors for each of them", () => {
-//         // col numbers
-//         act(() => {
-//             render(<Grids row_num={10} col_num={3} />, container);
-//         });
-//         const col = container.querySelector('div').querySelector('div');
-//         expect(col.getElementsByTagName('div').length).toEqual(3);
-// 
-//         // row numbers
-//         act(() => {
-//             render(<Grids row_num={10} col_num={3} />, container);
-//         });
-//         const row = container.querySelector('div');
-//         expect(row.children.length).toEqual(10);
+    test(">> test if can render exact number of pixels, and correctly colors rendered for each of pixel", () => {
+        // col numbers
+        act(() => {
+            const func = jest.fn()
+            render
+            (
+              <DataContext.Provider value=
+                {{ 
+                    data: [8, 16, 24],
+                    callback: func,
+                    max_row: 128,
+                    max_col: 256 
+                }}
+              >
+                <Grids row_num={10} col_num={3} />
+              </DataContext.Provider>, container
+            );
+        });
+        const col = container.querySelector('div').querySelector('div');
+        expect(col.getElementsByTagName('div').length).toEqual(3);
+
+        // row numbers
+        act(() => {
+            const func = jest.fn()
+            render
+            (
+              <DataContext.Provider value=
+                {{ 
+                    data: [8, 16, 24],
+                    callback: func,
+                    max_row: 128,
+                    max_col: 256 
+                }}
+              >
+                <Grids row_num={10} col_num={3} />
+              </DataContext.Provider>, container
+            );
+        });
+        const row = container.querySelector('div');
+        expect(row.children.length).toEqual(10);
         
-        // correct rgb value with 3 * 3 data
-		// let fake_data = 
-		// [
-		//   [ 1, 1, 1 ], [ 1, 1, 2 ], [ 1, 1, 3 ],
-		//   [ 1, 2, 1 ], [ 1, 2, 2 ], [ 1, 2, 3 ],
-		//   [ 1, 3, 1 ], [ 1, 3, 2 ], [ 1, 3, 3 ],
-		//   [ 2, 1, 1 ], [ 2, 1, 2 ], [ 2, 1, 3 ],
-		//   [ 2, 2, 1 ], [ 2, 2, 2 ], [ 2, 2, 3 ],
-		//   [ 2, 3, 1 ], [ 2, 3, 2 ], [ 2, 3, 3 ],
-		//   [ 3, 1, 1 ], [ 3, 1, 2 ], [ 3, 1, 3 ],
-		//   [ 3, 2, 1 ], [ 3, 2, 2 ], [ 3, 2, 3 ],
-		//   [ 3, 3, 1 ], [ 3, 3, 2 ], [ 3, 3, 3 ]
-        // ]       
-        // // we are going to pick rgb [3,1,2] to represents rgb
-        // // so it location in pixel col and row will 2, 7 
+        //check if correct rgb color rendered
         // act(() => {
-        //     render(<Grids row_num={9} col_num={3} />, container);
-        // });
-        // const rgb_col = container.querySelector('div').querySelector('div').getElementsByTagName('div')[2];      
-        // const rgb_row = container.querySelector('div').children[7];
-        // expect(rgb_col).toEqual(2); 
-        // expect({rgb_col}-{rgb_row}).toEqual(7);  
-    //}); 
+        //     const func = jest.fn()
+        //     render
+        //     (
+        //       <DataContext.Provider value=
+        //         {{ 
+        //             data: [1, 2, 3],
+        //             callback: func,
+        //             max_row: 128,
+        //             max_col: 256 
+        //         }}
+        //       >
+        //         <DataContext.Consumer>{func}</DataContext.Consumer>
+        //       </DataContext.Provider>, container
+        //     );
+        //     expect(func.mock.calls).toEqual('a');
+        // }); 
+    }); 
 });

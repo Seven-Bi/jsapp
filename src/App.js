@@ -6,7 +6,7 @@ import { DataContext } from "./DataContext";
 
 
 
-const text = 'This is a demo for displaying a pixeled image widget :)';
+const text = 'The image is formed by 128*256 different color pixels';
 
 let ReadMe = () => {
 	return(
