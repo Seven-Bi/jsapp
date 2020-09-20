@@ -19,7 +19,6 @@ let ReadMe = () => {
 
 //callback
 let load_rgb_color = (row_index, col_index, rgb_color_array, max_col) => {
-	console.log('hi')
 	let index = 0;
 	if (row_index === 1) {
 		index = col_index;
