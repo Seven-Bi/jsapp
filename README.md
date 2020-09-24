@@ -1,6 +1,3 @@
-SEQTA Code Challenge
----
-
 
 Quick view to current work
 ---
